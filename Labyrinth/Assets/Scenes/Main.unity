@@ -1356,7 +1356,7 @@ GameObject:
   - component: {fileID: 1862105141}
   - component: {fileID: 1862105140}
   m_Layer: 0
-  m_Name: "lilla v\xF5tti"
+  m_Name: Purple Key
   m_TagString: ObjectToCollect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
