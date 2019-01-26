@@ -8,7 +8,9 @@ TagManager:
   - Door
   - GreenDoor
   - PurpleDoor
-  
+  - Clutter
+  - Human
+  - GreenKey
   layers:
   - Default
   - TransparentFX

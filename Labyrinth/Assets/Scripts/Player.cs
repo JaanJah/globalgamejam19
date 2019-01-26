@@ -11,13 +11,16 @@ public class Player : MonoBehaviour {
     public Text CollectedItems;
     public Text TimeElapsed;
     public Stopwatch stopwatch;
-
+    public Image GreenKey;
+    public Color32 startingColor;
     // Use this for initialization
     void Start ()
     {
         stopwatch = new Stopwatch();
         stopwatch.Start();
-	}
+        startingColor = GreenKey.GetComponent<Image>().color;
+        GreenKey.GetComponent<Image>().color = new Color32(255, 255, 225, 100);
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -52,6 +55,17 @@ public class Player : MonoBehaviour {
             stopwatch.Reset();
         }
 
+        if (collision.gameObject.tag == "GreenKey")
+        {
+            GreenKey.GetComponent<Image>().color = startingColor;
+            Inventory.Add(collision.gameObject.name);
+            foreach (var item in Inventory)
+            {
+                Uitext += item + ", ";
+            }
+            CollectedItems.text = Uitext;
+            Destroy(collision.gameObject);
+        }
         if (collision.gameObject.tag == "GreenDoor")
         {
             if (Inventory.Contains("greenKey"))
@@ -63,7 +77,9 @@ public class Player : MonoBehaviour {
                     Uitext += item + ", ";
                 }
                 CollectedItems.text = Uitext;
+                Destroy(GreenKey.gameObject);
             }
+            
         }
 
         if (collision.gameObject.tag == "PurpleDoor")
