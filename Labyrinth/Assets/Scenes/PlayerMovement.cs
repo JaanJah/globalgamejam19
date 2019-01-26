@@ -27,21 +27,20 @@ public class PlayerMovement : MonoBehaviour
         Vector2 MoveInput = new Vector2(moveHorizontal, moveVertical);
         MoveVel = MoveInput.normalized * Speed;
 
-         Vector3 mousePos = Input.mousePosition;
-         mousePos.z = 5.23f;
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 5.23f;
  
-         Vector3 objectPos = Camera.main.WorldToScreenPoint (transform.position);
-         mousePos.x = mousePos.x - objectPos.x;
-         mousePos.y = mousePos.y - objectPos.y;
+        Vector3 objectPos = Camera.main.WorldToScreenPoint (transform.position);
+        mousePos.x = mousePos.x - objectPos.x;
+        mousePos.y = mousePos.y - objectPos.y;
  
-         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
+        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate()
     {
-        //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
         //Rb.MovePosition(MoveVel * Speed);
         Rb.MovePosition(Rb.position + MoveVel * Time.fixedDeltaTime);
     }
