@@ -995,7 +995,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897490545}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 1.9277109, y: -4.1, z: -0.34}
+  m_LocalPosition: {x: 1.9277109, y: -15.9, z: -0.34}
   m_LocalScale: {x: 6.0240965, y: 1, z: 6.0241}
   m_Children: []
   m_Father: {fileID: 904679623}
@@ -1012,9 +1012,9 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 14.07
-  m_Range: 5.2095294
-  m_SpotAngle: 102.49651
+  m_Intensity: 30.7
+  m_Range: 7.611102
+  m_SpotAngle: 48.162323
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -1278,21 +1278,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
-        type: 3}
-      propertyPath: CollectedItems
-      value: 
-      objectReference: {fileID: 1885639532}
-    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
-        type: 3}
-      propertyPath: TimeElapsed
-      value: 
-      objectReference: {fileID: 884183757}
-    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
-        type: 3}
-      propertyPath: Mom
-      value: 
-      objectReference: {fileID: 2056004948}
     - target: {fileID: 4134625348132244, guid: acf78275a51d785479cc1d55f7c6796c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.02
@@ -1333,6 +1318,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.166
       objectReference: {fileID: 0}
+    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
+        type: 3}
+      propertyPath: CollectedItems
+      value: 
+      objectReference: {fileID: 1885639532}
+    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
+        type: 3}
+      propertyPath: TimeElapsed
+      value: 
+      objectReference: {fileID: 884183757}
+    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
+        type: 3}
+      propertyPath: Mom
+      value: 
+      objectReference: {fileID: 2056004948}
     - target: {fileID: 212914569364632368, guid: acf78275a51d785479cc1d55f7c6796c,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -2345,7 +2345,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 180a0655d2099c740af48fa375e89e02, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5596,7 +5596,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8ac2a62b006a5343a10e6ba249965ff, type: 2}
+  - {fileID: 2100000, guid: 180a0655d2099c740af48fa375e89e02, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12769,6 +12769,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: UnconnsiousAnimation
       objectReference: {fileID: 0}
+    - target: {fileID: 812948374842628322, guid: c5d01ee15e0b26841883c4e7868f0c1e,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 812948374842628322, guid: c5d01ee15e0b26841883c4e7868f0c1e,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5d01ee15e0b26841883c4e7868f0c1e, type: 3}
 --- !u!1001 &6891080218620103684
@@ -12836,6 +12846,16 @@ PrefabInstance:
     - target: {fileID: 6891080218988582556, guid: 9e8a10c040bd3e342af9a5e585be1423,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891080218988582547, guid: 9e8a10c040bd3e342af9a5e585be1423,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891080218988582547, guid: 9e8a10c040bd3e342af9a5e585be1423,
+        type: 3}
+      propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
