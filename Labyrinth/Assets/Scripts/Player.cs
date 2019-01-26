@@ -57,16 +57,5 @@ public class Player : MonoBehaviour {
                 //TODO: Remove the items from CollectedItems.text when this if statement occurs
             }
         }
-
-        foreach (var item in Inventory)
-        {
-            if (item == "purpleKey" && collision.gameObject.name == "purpleDoor" ||
-                item == "greenKey" && collision.gameObject.name == "greenDoor")
-            {
-                Destroy(collision.gameObject);
-                Inventory.Remove(item);
-                //TODO: Remove the items from CollectedItems.text when this if statement occurs
-            }
-        }
     }
 }
