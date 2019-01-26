@@ -50,7 +50,12 @@ public class Player : MonoBehaviour {
                     Inventory.Add("Mom");
                     CollectedItems.text += "Mom\n";
                     Destroy(collision.gameObject);
-
+                    Mom.GetComponent<Image>().color = startingColor;
+                    break;
+                default:
+                    Inventory.Add(collision.gameObject.name);
+                    CollectedItems.text += collision.gameObject.name;
+                    Destroy(collision.gameObject);
                     break;
             }
             //Inventory.Add(collision.gameObject.name);
