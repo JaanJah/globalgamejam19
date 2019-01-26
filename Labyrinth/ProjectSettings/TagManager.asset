@@ -42,3 +42,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Backround
+    uniqueID: 3953818199
+    locked: 0
+  - name: Tilemap
+    uniqueID: 2479466127
+    locked: 0
+  - name: Clutter
+    uniqueID: 3900004201
+    locked: 0
+  - name: ObjectsToCollect
+    uniqueID: 2194514217
+    locked: 0
+  - name: Player
+    uniqueID: 736485957
+    locked: 0
