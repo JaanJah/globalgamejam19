@@ -11,6 +11,7 @@ TagManager:
   - Clutter
   - Human
   - GreenKey
+  - PurpleKey
   layers:
   - Default
   - TransparentFX

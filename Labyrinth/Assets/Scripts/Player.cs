@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
     public Text TimeElapsed;
     public Stopwatch stopwatch;
     public Image GreenKey;
+    public Image PurpleKey;
     public Color32 startingColor;
     // Use this for initialization
     void Start ()
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour {
         stopwatch.Start();
         startingColor = GreenKey.GetComponent<Image>().color;
         GreenKey.GetComponent<Image>().color = new Color32(255, 255, 225, 100);
+        PurpleKey.GetComponent<Image>().color = new Color32(255, 255, 225, 100);
     }
 	
 	// Update is called once per frame
