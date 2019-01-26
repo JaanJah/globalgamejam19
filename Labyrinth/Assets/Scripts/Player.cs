@@ -14,7 +14,6 @@ public class Player : MonoBehaviour {
             Inventory.Add(collision.gameObject.name);
             CollectedItems.text += collision.gameObject.name+", ";
             Destroy(collision.gameObject);
-            
         }
 
         foreach (var item in Inventory)
@@ -27,6 +26,7 @@ public class Player : MonoBehaviour {
                 //TODO: Remove the items from CollectedItems.text when this if statement occurs
             }
         }
+
     }
     // Use this for initialization
     void Start () {

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ObjectToCollect
+  - KeyDoor
+  - Clutter
   layers:
   - Default
   - TransparentFX
@@ -56,4 +58,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 736485957
+    locked: 0
+  - name: KeyDoor
+    uniqueID: 4114950369
     locked: 0
