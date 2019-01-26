@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - ObjectToCollect
+  - Door
+  - GreenDoor
+  - PurpleDoor
   layers:
   - Default
   - TransparentFX
