@@ -37,7 +37,7 @@ public class Player : MonoBehaviour {
         if (collision.gameObject.tag == "ObjectToCollect")
         {
             Inventory.Add(collision.gameObject.name);
-            CollectedItems.text += collision.gameObject.name + ", ";
+            CollectedItems.text = Inventory.ToString();
             Destroy(collision.gameObject);
 
         }
@@ -57,5 +57,28 @@ public class Player : MonoBehaviour {
                 //TODO: Remove the items from CollectedItems.text when this if statement occurs
             }
         }
+
+        foreach (var item in Inventory)
+        {
+            if (item == "purpleKey" && collision.gameObject.name == "purpleDoor" ||
+                item == "greenKey" && collision.gameObject.name == "greenDoor")
+            {
+                Destroy(collision.gameObject);
+                Inventory.Remove(item);
+                //TODO: Remove the items from CollectedItems.text when this if statement occurs
+            }
+        }
     }
+<<<<<<< HEAD
+=======
+    // Use this for initialization
+    void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update ()
+    {
+	}
+>>>>>>> 545bdca692d2752e95e1f9e2f1f6c29ce7087456
 }
