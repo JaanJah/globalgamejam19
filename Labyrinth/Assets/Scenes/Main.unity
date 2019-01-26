@@ -179,7 +179,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -423,11 +423,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4134625348132244, guid: acf78275a51d785479cc1d55f7c6796c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.26620013
+      value: 0.166
       objectReference: {fileID: 0}
     - target: {fileID: 4134625348132244, guid: acf78275a51d785479cc1d55f7c6796c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.28130656
+      value: 0.166
       objectReference: {fileID: 0}
     - target: {fileID: 212914569364632368, guid: acf78275a51d785479cc1d55f7c6796c,
         type: 3}
@@ -438,6 +438,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 212914569364632368, guid: acf78275a51d785479cc1d55f7c6796c,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 50773505849182872, guid: acf78275a51d785479cc1d55f7c6796c,
         type: 3}
@@ -14082,7 +14087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bd017b67a43e044afa6a14d8179ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 904679617}
 --- !u!58 &2062171854
 CircleCollider2D:
   m_ObjectHideFlags: 0
