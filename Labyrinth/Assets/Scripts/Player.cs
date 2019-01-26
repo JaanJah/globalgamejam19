@@ -69,16 +69,4 @@ public class Player : MonoBehaviour {
             }
         }
     }
-<<<<<<< HEAD
-=======
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-	}
->>>>>>> 545bdca692d2752e95e1f9e2f1f6c29ce7087456
 }
