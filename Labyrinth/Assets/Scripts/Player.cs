@@ -37,7 +37,7 @@ public class Player : MonoBehaviour {
         if (collision.gameObject.tag == "ObjectToCollect")
         {
             Inventory.Add(collision.gameObject.name);
-            CollectedItems.text = Inventory.ToString();
+            CollectedItems.text += collision.gameObject.name;
             Destroy(collision.gameObject);
 
         }
