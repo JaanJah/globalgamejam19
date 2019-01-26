@@ -6,6 +6,7 @@ using UnityEngine;
 public class BreakableObject : MonoBehaviour
 {
     private int NumberOfClicks { get; set; }
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +21,11 @@ public class BreakableObject : MonoBehaviour
 
     private void OnMouseDown()  
     {
-        NumberOfClicks++;
-        shakeGameObject(gameObject, 0.5f, 0.1f, true);
+        if (Vector2.Distance(gameObject.transform.position, Player.transform.position) <= 1.7)
+        {
+            NumberOfClicks++;
+            shakeGameObject(gameObject, 0.5f, 0.1f, true); 
+        }
     }
 
     void shakeGameObject(GameObject objectToShake, float shakeDuration, float decreasePoint, bool objectIs2D)

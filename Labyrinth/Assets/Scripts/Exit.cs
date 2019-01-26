@@ -6,7 +6,7 @@ public class Exit : MonoBehaviour {
     public Player Player = new Player();
     public List<string>inventory = new List<string>();
     private int FullInventory = 5;
-    public BoxCollider2D collider;
+    public BoxCollider2D collidingObject;
     // Use this for initialization
     void Start () {
 		
@@ -18,7 +18,7 @@ public class Exit : MonoBehaviour {
         inventory.Sort();
         if (inventory.Count == FullInventory)
         {
-            Destroy(collider);
+            Destroy(collidingObject);
         }
 	}
 }
