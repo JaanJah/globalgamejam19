@@ -8,16 +8,23 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour {
 
     public List<string> Inventory = new List<string>();
+
     public Text CollectedItems;
     public Text TimeElapsed;
+
     public Stopwatch stopwatch;
 
-    // Use this for initialization
+    public Color32 startingColor;
+
+    public Image Mom;
+   
     void Start ()
     {
         stopwatch = new Stopwatch();
         stopwatch.Start();
-	}
+        startingColor = new Color32(194, 194, 194, 255);
+        Mom.GetComponent<Image>().color = new Color32(255, 255, 225, 100);
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -37,13 +44,22 @@ public class Player : MonoBehaviour {
         string Uitext = "";
         if (collision.gameObject.tag == "ObjectToCollect")
         {
-            Inventory.Add(collision.gameObject.name);
-            foreach (var item in Inventory)
+            switch (collision.gameObject.name)
             {
-                Uitext += item +", ";
+                case "Mom":
+                    Inventory.Add("Mom");
+                    CollectedItems.text += "Mom\n";
+                    Destroy(collision.gameObject);
+
+                    break;
             }
-            CollectedItems.text = Uitext;
-            Destroy(collision.gameObject);
+            //Inventory.Add(collision.gameObject.name);
+            //foreach (var item in Inventory)
+            //{
+            //    Uitext += item +", ";
+            //}
+            //CollectedItems.text = Uitext;
+            //Destroy(collision.gameObject);
 
         }
         if (collision.gameObject.tag == "Door")
