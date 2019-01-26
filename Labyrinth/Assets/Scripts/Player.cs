@@ -75,10 +75,10 @@ public class Player : MonoBehaviour {
 
         if (collision.gameObject.tag == "GreenDoor")
         {
-            if (Inventory.Contains("greenKey"))
+            if (Inventory.Contains("Green Key"))
             {
                 Destroy(collision.gameObject);
-                Inventory.Remove("greenKey");
+                Inventory.Remove("Green Key");
                 foreach (var item in Inventory)
                 {
                     Uitext += item + ", ";
@@ -89,10 +89,10 @@ public class Player : MonoBehaviour {
 
         if (collision.gameObject.tag == "PurpleDoor")
         {
-            if (Inventory.Contains("purpleKey"))
+            if (Inventory.Contains("Purple Key"))
             {
                 Destroy(collision.gameObject);
-                Inventory.Remove("purpleKey");
+                Inventory.Remove("Purple Key");
                 foreach (var item in Inventory)
                 {
                     Uitext += item + ", ";
