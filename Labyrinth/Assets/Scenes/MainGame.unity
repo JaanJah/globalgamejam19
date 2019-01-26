@@ -312,6 +312,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
+        type: 3}
+      propertyPath: CollectedItems
+      value: 
+      objectReference: {fileID: 1885639532}
     - target: {fileID: 4134625348132244, guid: acf78275a51d785479cc1d55f7c6796c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.02
@@ -372,11 +377,6 @@ PrefabInstance:
       propertyPath: Speed
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
-        type: 3}
-      propertyPath: CollectedItems
-      value: 
-      objectReference: {fileID: 1885639532}
     m_RemovedComponents:
     - {fileID: 61516460681949638, guid: acf78275a51d785479cc1d55f7c6796c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: acf78275a51d785479cc1d55f7c6796c, type: 3}
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 1885639533}
   - component: {fileID: 1885639532}
   m_Layer: 5
-  m_Name: Text
+  m_Name: CollectedObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
