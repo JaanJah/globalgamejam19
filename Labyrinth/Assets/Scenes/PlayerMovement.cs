@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float Speed;             //Floating point variable to store the player's movement speed.
     private Vector2 MoveVel;
     private Rigidbody2D Rb;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
+    public Animator Animator;
+    public Animator ShoulderAnimator;
 
     // Use this for initialization
     void Start()
@@ -19,10 +21,10 @@ public class PlayerMovement : MonoBehaviour
     {
         //Store the current horizontal input in the float moveHorizontal.
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
-
         //Store the current vertical input in the float moveVertical.
         float moveVertical = Input.GetAxisRaw("Vertical");
-
+        Animator.SetFloat("Walking", Mathf.Abs(moveVertical)+ Mathf.Abs(moveHorizontal));
+        //ShoulderAnimator.SetFloat("Walking", Mathf.Abs(moveVertical) + Mathf.Abs(moveHorizontal));
         //Use the two store floats to create a new Vector2 variable movement.
         Vector2 MoveInput = new Vector2(moveHorizontal, moveVertical);
         MoveVel = MoveInput.normalized * Speed;
