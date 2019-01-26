@@ -1154,6 +1154,16 @@ PrefabInstance:
       propertyPath: Mom
       value: 
       objectReference: {fileID: 2056004948}
+    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
+        type: 3}
+      propertyPath: PurpleDoor
+      value: 
+      objectReference: {fileID: 8300000, guid: 8593f2125cf2fb746832e8a6373a0730, type: 3}
+    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
+        type: 3}
+      propertyPath: GreenDoor
+      value: 
+      objectReference: {fileID: 8300000, guid: bfc04bf79268fdd488513c9cc9dbecb8, type: 3}
     - target: {fileID: 212914569364632368, guid: acf78275a51d785479cc1d55f7c6796c,
         type: 3}
       propertyPath: m_SortingLayerID

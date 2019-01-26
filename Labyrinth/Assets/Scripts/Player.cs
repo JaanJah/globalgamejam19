@@ -17,6 +17,9 @@ public class Player : MonoBehaviour {
     public Color32 startingColor;
 
     public Image Mom;
+
+    public AudioClip GreenDoor;
+    public AudioClip PurpleDoor;
    
     void Start ()
     {
@@ -78,6 +81,7 @@ public class Player : MonoBehaviour {
             if (Inventory.Contains("Green Key"))
             {
                 Destroy(collision.gameObject);
+                gameObject.GetComponent<AudioSource>().PlayOneShot(GreenDoor);
                 Inventory.Remove("Green Key");
                 foreach (var item in Inventory)
                 {
@@ -92,6 +96,7 @@ public class Player : MonoBehaviour {
             if (Inventory.Contains("Purple Key"))
             {
                 Destroy(collision.gameObject);
+                gameObject.GetComponent<AudioSource>().PlayOneShot(PurpleDoor);
                 Inventory.Remove("Purple Key");
                 foreach (var item in Inventory)
                 {
