@@ -5,9 +5,8 @@ using UnityEngine;
 public class Exit : MonoBehaviour {
     public Player Player = new Player();
     public List<string>inventory = new List<string>();
-    public bool IsOpen = false;
     private int FullInventory = 5;
-
+    public BoxCollider2D collidingObject;
     // Use this for initialization
     void Start () {
 		
@@ -19,7 +18,7 @@ public class Exit : MonoBehaviour {
         inventory.Sort();
         if (inventory.Count == FullInventory)
         {
-            IsOpen = true;
+            Destroy(collidingObject);
         }
 	}
 }
