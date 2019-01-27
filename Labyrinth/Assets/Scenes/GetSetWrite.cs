@@ -43,18 +43,31 @@ public class GetSetWrite : MonoBehaviour
         var Laps = 1;
         HiScores.text = "Hiscores:\n";
         var lines = File.ReadAllLines(@"../scores.txt");
+        bool moreThanFiveScores = false;
+        int skipLines = 0;
+        if (lines.Length > 5)
+        {
+            skipLines = lines.Length - 5;
+            moreThanFiveScores = true;
+        }
         foreach (var line in lines)
         {
-            
-            if (Laps == lines.Length)
+            if (moreThanFiveScores == true && skipLines != 0)
             {
-                HiScores.text += "\nYour Score:\n" + line.ToString(); 
+                skipLines -= 1;
             }
             else
             {
-                HiScores.text += line.ToString() + "\n";
-                Laps++;
-            }            
+                if (Laps == lines.Length)
+                {
+                    HiScores.text += "\nYour Score:\n" + line.ToString(); 
+                }
+                else
+                {
+                    HiScores.text += line.ToString() + "\n";
+                    Laps++;
+                }            
+            }
         }
     }
 
