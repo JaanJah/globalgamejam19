@@ -171,10 +171,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 2
+    m_FontSize: 16
+    m_FontStyle: 3
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -182,9 +182,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "This game was made in 48 hours\r\ndurning the Global Game Jam 2019\r\nCredits:\r\nGert-Andry
-    K\xE4\xE4ramees\r\nKaur Samuel Kannel\r\nJaan Markus Jahilo\r\nKarol(ei m\xE4leta
-    perekonnanime(sorry))\r\nKaspar Rosin\r\nRobert Tohver"
+  m_Text: "This game was made in 48 hours\r\nduring the Global Game Jam 2019\r\n\nCredits:\r\nGert-Andry
+    K\xE4\xE4ramees\r\nKaur Samuel Kannel\r\nJaan Markus Jahilo\r\nKarol Kaldam\nKaspar
+    Rosin\r\nRoberts Pauls Tohver"
 --- !u!222 &15049428
 CanvasRenderer:
   m_ObjectHideFlags: 0
