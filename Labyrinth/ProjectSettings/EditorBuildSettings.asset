@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: 1eef91c0069a39c419af6dff2e53aac1
   - enabled: 1
-    path: Assets/Scenes/ShareNickname.unity
-    guid: 305c63b56c249594baf85bf2c5756fd5
-  - enabled: 1
     path: Assets/Scenes/Main map.unity
     guid: b64e5ab0f9bda2547bd9f2ba173ebc1d
+  - enabled: 1
+    path: Assets/Scenes/ShareNickname.unity
+    guid: 305c63b56c249594baf85bf2c5756fd5
   - enabled: 1
     path: Assets/Scenes/TheEnd.unity
     guid: 76095fbed0963d74287fd86d2535fbf9
