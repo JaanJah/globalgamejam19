@@ -44,7 +44,7 @@ public class GameOver : MonoBehaviour
             GameOverBool = true;
             stopwatch.Stop();
             //File.AppendAllText(@"../scores.txt", elapsedTime + " ");
-            SceneManager.LoadScene("ShareNickname");
+            SceneManager.LoadScene("TheEnd");
             //anim.SetTrigger("fadeout");
         }
     }
