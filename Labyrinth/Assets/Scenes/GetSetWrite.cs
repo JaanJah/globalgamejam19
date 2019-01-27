@@ -45,9 +45,9 @@ public class GetSetWrite : MonoBehaviour
         var lines = File.ReadAllLines(@"../scores.txt");
         bool moreThanFiveScores = false;
         int skipLines = 0;
-        if (lines.Length > 5)
+        if (lines.Length > 4)
         {
-            skipLines = lines.Length - 5;
+            skipLines = lines.Length - 4;
             moreThanFiveScores = true;
         }
         foreach (var line in lines)
