@@ -27,6 +27,7 @@ public class Player : MonoBehaviour {
 
     public AudioClip GreenDoor;
     public AudioClip PurpleDoor;
+    public AudioClip Pickup;
    
     void Start ()
     {
@@ -46,6 +47,7 @@ public class Player : MonoBehaviour {
         string Uitext = "";
         if (collision.gameObject.tag == "ObjectToCollect")
         {
+            gameObject.GetComponent<AudioSource>().PlayOneShot(Pickup);
             switch (collision.gameObject.name)
             {
                 case "Woman":
