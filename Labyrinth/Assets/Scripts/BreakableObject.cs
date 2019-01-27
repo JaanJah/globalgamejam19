@@ -9,6 +9,8 @@ public class BreakableObject : MonoBehaviour
     public GameObject Player;
 
     public AudioClip BreakNoise;
+    public GameObject Cover;
+    public GameObject Room;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,19 @@ public class BreakableObject : MonoBehaviour
 
     private void OnMouseDown()  
     {
+        if (Vector2.Distance(gameObject.transform.position, Player.transform.position) <= 1.7 && gameObject.name == "Secret Wall")
+        {
+            NumberOfClicks++;
+            gameObject.GetComponent<AudioSource>().PlayOneShot(BreakNoise);
+            if (NumberOfClicks >= 4)
+            {
+                Thread.Sleep(250);
+                Destroy(gameObject);
+                Destroy(Cover);
+                Room.SetActive(true);
+            }
+            return;
+        }
         if (Vector2.Distance(gameObject.transform.position, Player.transform.position) <= 1.7)
         {
             NumberOfClicks++;
