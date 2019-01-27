@@ -21,6 +21,8 @@ public class Player : MonoBehaviour {
     public Image Boy;
     public Image GreenKey;
     public Image PurpleKey;
+    public Image Girl;
+    public Image Phone;
 
     public AudioClip GreenDoor;
     public AudioClip PurpleDoor;
@@ -30,11 +32,13 @@ public class Player : MonoBehaviour {
         stopwatch = new Stopwatch();
         stopwatch.Start();
         startingColor = new Color32(225, 225, 225, 255);
-        //Mom.GetComponent<Image>().color = new Color32(255, 255, 225, 100);
+        Mom.GetComponent<Image>().color = new Color32(255, 255, 225, 100);
         Dog.GetComponent<Image>().color = new Color32(255, 255, 225, 100);
         Boy.GetComponent<Image>().color = new Color32(255, 255, 225, 100);
         GreenKey.GetComponent<Image>().color = new Color32(255, 255, 225, 100);
         PurpleKey.GetComponent<Image>().color = new Color32(255, 255, 225, 100);
+        Girl.GetComponent<Image>().color = new Color32(255, 255, 225, 100);
+        Phone.GetComponent<Image>().color = new Color32(255, 255, 225, 100);
     }
 	
 	// Update is called once per frame
@@ -69,23 +73,35 @@ public class Player : MonoBehaviour {
                     Destroy(collision.gameObject);
                     Dog.GetComponent<Image>().color = startingColor;
                     break;
+                case "Boy":
+                    Inventory.Add("Boy");
+                    CollectedItems.text += "Boy, ";
+                    Destroy(collision.gameObject);
+                    Boy.GetComponent<Image>().color = startingColor;
+                    break;
                 case "Green Key":
                     Inventory.Add("Green Key");
                     CollectedItems.text += "Green key, ";
                     Destroy(collision.gameObject);
                     GreenKey.GetComponent<Image>().color = startingColor;
                     break;
-                case "Boy":
-                    Inventory.Add("Boy");
-                    CollectedItems.text += "Boy, ";
-                    Destroy(collision.gameObject);
-                    
-                    break;
                 case "Purple Key":
                     Inventory.Add("Purple Key");
                     CollectedItems.text += "Purple Key, ";
                     Destroy(collision.gameObject);
                     PurpleKey.GetComponent<Image>().color = startingColor;
+                    break;
+                case "Girl":
+                    Inventory.Add("Girl");
+                    CollectedItems.text += "Girl, ";
+                    Destroy(collision.gameObject);
+                    Girl.GetComponent<Image>().color = startingColor;
+                    break;
+                case "Phone":
+                    Inventory.Add("Phone");
+                    CollectedItems.text += "Phone, ";
+                    Destroy(collision.gameObject);
+                    Phone.GetComponent<Image>().color = startingColor;
                     break;
                 default:
                     Inventory.Add(collision.gameObject.name);

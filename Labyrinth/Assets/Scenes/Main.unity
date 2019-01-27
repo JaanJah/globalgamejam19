@@ -220,8 +220,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 206.5, y: -265.21}
-  m_SizeDelta: {x: 53.87, y: 47.96}
+  m_AnchoredPosition: {x: 205, y: -270.4}
+  m_SizeDelta: {x: 81.18, y: 79.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &273825675
 MonoBehaviour:
@@ -243,7 +243,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1ea19a35bda7be44397ac8ab48826a5b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -862,8 +862,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 134.83, y: -265.21}
-  m_SizeDelta: {x: 53.87, y: 47.96}
+  m_AnchoredPosition: {x: 133.9, y: -264.33}
+  m_SizeDelta: {x: 65.77, y: 49.71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &692776245
 MonoBehaviour:
@@ -885,7 +885,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 036298e7953422e468d16b6b756a1ed4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1604,7 +1604,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Mom
       value: 
-      objectReference: {fileID: 1208255550}
+      objectReference: {fileID: 1279033133}
     - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
         type: 3}
       propertyPath: PurpleDoor
@@ -1635,6 +1635,16 @@ PrefabInstance:
       propertyPath: Boy
       value: 
       objectReference: {fileID: 1208255550}
+    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
+        type: 3}
+      propertyPath: Girl
+      value: 
+      objectReference: {fileID: 692776245}
+    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
+        type: 3}
+      propertyPath: Phone
+      value: 
+      objectReference: {fileID: 273825675}
     - target: {fileID: 4134625348132244, guid: acf78275a51d785479cc1d55f7c6796c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.02
@@ -1863,8 +1873,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 277.71, y: -265.85}
-  m_SizeDelta: {x: 48.81, y: 46.67}
+  m_AnchoredPosition: {x: 279.0962, y: -265.69086}
+  m_SizeDelta: {x: 53.582, y: 48.917}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1279033133
 MonoBehaviour:
@@ -1886,7 +1896,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 78ec09645eed6cc429724c4d88cee868, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
