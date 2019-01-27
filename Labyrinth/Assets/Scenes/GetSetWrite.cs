@@ -25,7 +25,7 @@ public class GetSetWrite : MonoBehaviour
     {
         if (Nickname.text != "")
         {
-            File.AppendAllText(@"../scores.txt", Nickname.text + Environment.NewLine);
+            File.AppendAllText(@"../scores.txt", HoldValue.ElapsedTime + " " + Nickname.text + Environment.NewLine);
             Input2.SetActive(false);
             Button2.SetActive(false);
             HiScores2.SetActive(true);

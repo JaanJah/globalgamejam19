@@ -12,7 +12,7 @@ public class GameOver : MonoBehaviour
 {
     public Stopwatch stopwatch;
     public Text TimeElapsed;
-    private string elapsedTime;
+    private static string elapsedTime;
     private bool GameOverBool;
     public Animator anim;
 
@@ -32,6 +32,7 @@ public class GameOver : MonoBehaviour
             elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
             ts.Hours, ts.Minutes, ts.Seconds,
             ts.Milliseconds / 10);
+            HoldValue.ElapsedTime = elapsedTime;
             TimeElapsed.text = elapsedTime;
         }
     }
@@ -42,7 +43,7 @@ public class GameOver : MonoBehaviour
         {
             GameOverBool = true;
             stopwatch.Stop();
-            File.AppendAllText(@"../scores.txt", elapsedTime + " ");
+            //File.AppendAllText(@"../scores.txt", elapsedTime + " ");
             anim.SetTrigger("fadeout");
         }
     }

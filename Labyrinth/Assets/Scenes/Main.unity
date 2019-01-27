@@ -684,21 +684,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
-        type: 3}
-      propertyPath: CollectedItems
-      value: 
-      objectReference: {fileID: 1885639532}
-    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
-        type: 3}
-      propertyPath: TimeElapsed
-      value: 
-      objectReference: {fileID: 884183757}
-    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
-        type: 3}
-      propertyPath: Mom
-      value: 
-      objectReference: {fileID: 2056004948}
     - target: {fileID: 4134625348132244, guid: acf78275a51d785479cc1d55f7c6796c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.02
@@ -739,6 +724,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.166
       objectReference: {fileID: 0}
+    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
+        type: 3}
+      propertyPath: CollectedItems
+      value: 
+      objectReference: {fileID: 1885639532}
+    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
+        type: 3}
+      propertyPath: TimeElapsed
+      value: 
+      objectReference: {fileID: 884183757}
+    - target: {fileID: 114521357242423052, guid: acf78275a51d785479cc1d55f7c6796c,
+        type: 3}
+      propertyPath: Mom
+      value: 
+      objectReference: {fileID: 2056004948}
     - target: {fileID: 212914569364632368, guid: acf78275a51d785479cc1d55f7c6796c,
         type: 3}
       propertyPath: m_SortingLayerID
