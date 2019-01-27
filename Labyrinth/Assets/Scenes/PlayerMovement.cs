@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float Speed;             //Floating point variable to store the player's movement speed.
-    private Vector2 MoveVel;
+    public Vector2 MoveVel;
     private Rigidbody2D Rb;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
     public Animator Animator;
     public Animator ShoulderAnimator;
@@ -45,5 +45,6 @@ public class PlayerMovement : MonoBehaviour
     {
         //Rb.MovePosition(MoveVel * Speed);
         Rb.MovePosition(Rb.position + MoveVel * Time.fixedDeltaTime);
+        //Debug.Log(MoveVel);
     }
 }
