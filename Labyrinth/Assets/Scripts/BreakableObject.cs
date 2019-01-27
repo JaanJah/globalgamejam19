@@ -7,6 +7,8 @@ public class BreakableObject : MonoBehaviour
 {
     private int NumberOfClicks { get; set; }
     public GameObject Player;
+
+    public AudioClip BreakNoise;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class BreakableObject : MonoBehaviour
         if (Vector2.Distance(gameObject.transform.position, Player.transform.position) <= 1.7)
         {
             NumberOfClicks++;
+            gameObject.GetComponent<AudioSource>().PlayOneShot(BreakNoise);
             shakeGameObject(gameObject, 0.5f, 0.1f, true); 
         }
     }
@@ -119,6 +122,7 @@ public class BreakableObject : MonoBehaviour
 
         if (NumberOfClicks >= 4)
         {
+            Thread.Sleep(250);
             Destroy(gameObject);
         }
     }
