@@ -61,9 +61,9 @@ public class Player : MonoBehaviour {
         {
             switch (collision.gameObject.name)
             {
-                case "Mom":
-                    Inventory.Add("Mom");
-                    CollectedItems.text += "Mom\n";
+                case "Woman":
+                    Inventory.Add("Woman");
+                    CollectedItems.text += "Woman\n";
                     Destroy(collision.gameObject);
                     Mom.GetComponent<Image>().color = startingColor;
                     break;
@@ -73,9 +73,9 @@ public class Player : MonoBehaviour {
                     Destroy(collision.gameObject);
                     Dog.GetComponent<Image>().color = startingColor;
                     break;
-                case "Boy":
-                    Inventory.Add("Boy");
-                    CollectedItems.text += "Boy, ";
+                case "Baby":
+                    Inventory.Add("Baby");
+                    CollectedItems.text += "Baby, ";
                     Destroy(collision.gameObject);
                     Boy.GetComponent<Image>().color = startingColor;
                     break;
