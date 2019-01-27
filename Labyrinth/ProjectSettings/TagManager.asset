@@ -8,7 +8,7 @@ TagManager:
   - Door
   - GreenDoor
   - PurpleDoor
-  
+  - GameOver
   layers:
   - Default
   - TransparentFX

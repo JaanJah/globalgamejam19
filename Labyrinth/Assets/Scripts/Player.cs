@@ -12,7 +12,8 @@ public class Player : MonoBehaviour {
     public Text CollectedItems;
     public Text TimeElapsed;
 
-    public Stopwatch stopwatch;
+    public UnityEngine.Object Character;
+
 
     public Color32 startingColor;
 
@@ -20,24 +21,10 @@ public class Player : MonoBehaviour {
    
     void Start ()
     {
-        stopwatch = new Stopwatch();
-        stopwatch.Start();
         startingColor = new Color32(194, 194, 194, 255);
         Mom.GetComponent<Image>().color = new Color32(255, 255, 225, 100);
     }
 	
-	// Update is called once per frame
-	void Update ()
-    {        
-        if (stopwatch.IsRunning == true)
-        {
-            var ts = stopwatch.Elapsed;
-            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
-            ts.Hours, ts.Minutes, ts.Seconds,
-            ts.Milliseconds / 10);
-            TimeElapsed.text = elapsedTime;
-        }
-	}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -51,6 +38,9 @@ public class Player : MonoBehaviour {
                     CollectedItems.text += "Mom\n";
                     Destroy(collision.gameObject);
                     Mom.GetComponent<Image>().color = startingColor;
+                    break;
+                case "GameOver":
+                    Destroy(gameObject);
                     break;
                 default:
                     Inventory.Add(collision.gameObject.name);
@@ -66,11 +56,6 @@ public class Player : MonoBehaviour {
             //CollectedItems.text = Uitext;
             //Destroy(collision.gameObject);
 
-        }
-        if (collision.gameObject.tag == "Door")
-        {
-            stopwatch.Stop();
-            stopwatch.Reset();
         }
 
         if (collision.gameObject.tag == "GreenDoor")
@@ -100,5 +85,5 @@ public class Player : MonoBehaviour {
                 CollectedItems.text = Uitext;
             }
         }
-    }
+    }  
 }
