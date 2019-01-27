@@ -41,7 +41,7 @@ public class GetSetWrite : MonoBehaviour
     public void GetScores()
     {
         var Laps = 1;
-        HiScores.text = "Hiscores:\n";
+        HiScores.text = "Last 3 scores:\n";
         var lines = File.ReadAllLines(@"../scores.txt");
         bool moreThanFiveScores = false;
         int skipLines = 0;
@@ -58,7 +58,7 @@ public class GetSetWrite : MonoBehaviour
             }
             else
             {
-                if (Laps == lines.Length)
+                if (Laps == 4)
                 {
                     HiScores.text += "\nYour Score:\n" + line.ToString(); 
                 }
