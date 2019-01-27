@@ -14,11 +14,11 @@ public class GameOver : MonoBehaviour
     public Text TimeElapsed;
     private static string elapsedTime;
     private bool GameOverBool;
-    public Animator anim;
+    //public Animator anim;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+      //  anim = GetComponent<Animator>();
         stopwatch = new Stopwatch();
         stopwatch.Start();
     }
@@ -44,7 +44,8 @@ public class GameOver : MonoBehaviour
             GameOverBool = true;
             stopwatch.Stop();
             //File.AppendAllText(@"../scores.txt", elapsedTime + " ");
-            anim.SetTrigger("fadeout");
+            SceneManager.LoadScene("ShareNickname");
+            //anim.SetTrigger("fadeout");
         }
     }
 
