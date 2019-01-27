@@ -109,6 +109,17 @@ public class Player : MonoBehaviour {
 
         }
 
+        if (collision.gameObject.tag == "GreenKey")
+        {
+            GreenKey.GetComponent<Image>().color = startingColor;
+            Inventory.Add(collision.gameObject.name);
+            foreach (var item in Inventory)
+            {
+                Uitext += item + ", ";
+            }
+            CollectedItems.text = Uitext;
+            Destroy(collision.gameObject);
+        }
         if (collision.gameObject.tag == "GreenDoor")
         {
             if (Inventory.Contains("Green Key"))
@@ -117,8 +128,8 @@ public class Player : MonoBehaviour {
                 gameObject.GetComponent<AudioSource>().PlayOneShot(GreenDoor);
                 Inventory.Remove("Green Key");
                 CollectedItems.text = Uitext;
-
             }
+            
         }
 
         if (collision.gameObject.tag == "PurpleDoor")

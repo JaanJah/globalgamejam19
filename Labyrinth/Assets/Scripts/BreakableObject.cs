@@ -7,7 +7,6 @@ public class BreakableObject : MonoBehaviour
 {
     private int NumberOfClicks { get; set; }
     public GameObject Player;
-
     public AudioClip BreakNoise;
     // Start is called before the first frame update
     void Start()
